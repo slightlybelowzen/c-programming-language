@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /* check if a character is a space */
-bool is_whitespace(char c) { return c == '\n' || c == '\t' || c == ' '; }
+bool is_whitespace(const char c) { return c == '\n' || c == '\t' || c == ' '; }
 
 /* check if a character is a letter */
-bool is_letter(char c) {
+bool is_letter(const char c) {
   return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
 }
 
@@ -14,7 +14,7 @@ bool is_letter(char c) {
 void strip(char s[]) { int i = 0; }
 
 /* return the length of a given string */
-int _strlen(char s[]) {
+int _strlen(const char s[]) {
   int i = 0, len = 0;
   while (s[i] != '\0') {
     ++i;
@@ -39,7 +39,7 @@ int _getline(char s[], int lim) {
 }
 
 /* copy 'from' into 'to', assuming 'to' is big enough */
-void copy(char to[], char from[]) {
+void copy(char to[], const char from[]) {
   int i = 0;
   while ((to[i] = from[i]) != '\0') ++i;
 }
