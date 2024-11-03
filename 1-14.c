@@ -1,11 +1,9 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#define CHARACTERS_SET_SIZE 26 /* max length of a word, x-axis limit */
+#include "utils.c"
 
-bool is_char(char c) {
-  return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
-}
+#define CHARACTERS_SET_SIZE 26 /* max length of a word, x-axis limit */
 
 int main() {
   int c;
@@ -16,7 +14,7 @@ int main() {
   }
 
   while ((c = getchar()) != EOF) {
-    if (is_char(c)) {
+    if (is_letter(c)) {
       int char_index = c - 'a';
       ++char_frequency[char_index];
     } else {

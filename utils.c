@@ -1,7 +1,13 @@
 #include "utils.h"
+
 #include <stdio.h>
 
 bool is_whitespace(char c) { return c == '\n' || c == '\t' || c == ' '; }
+
+/* check if a character is a letter */
+bool is_letter(char c) {
+  return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+}
 
 /* remove trailing and starting blanks, tabs and entirely empty lines */
 void strip(char s[]) { int i = 0; }
@@ -24,6 +30,5 @@ int _getline(char s[], int lim) {
 /* copy 'from' into 'to', assuming 'to' is big enough */
 void copy(char to[], char from[]) {
   int i = 0;
-  while ((to[i] = from[i]) != '\0')
-    ++i;
+  while ((to[i] = from[i]) != '\0') ++i;
 }
