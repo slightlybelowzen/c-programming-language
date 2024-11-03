@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#include "utils.c"
+#include "../utils.c"
 
 #define CHARACTERS_SET_SIZE 26 /* max length of a word, x-axis limit */
 

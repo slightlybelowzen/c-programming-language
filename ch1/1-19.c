@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "utils.c"
+#include "../utils.c"
 
 int main() {
   char s[] = {'s', 'o', 'm', 'e', 't', 'h', 'i', 'n', 'g', '\0'};

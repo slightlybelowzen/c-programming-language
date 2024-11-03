@@ -48,7 +48,7 @@ void copy(char to[], const char from[]) {
 void reverse(char s[]) {
   // i in 0..len(s) / 2
   // swap(s[i], s[len - i - 1])
-  // don't move the last index terminates the string at index 0
+  // don't move the last index, terminates the string at index 0
   int i = 0, len = _strlen(s);
   int half_len = len / 2;
   for (i = 0; i < half_len; ++i) {

@@ -1,4 +1,4 @@
-#include "utils.c"
+#include "../utils.c"
 
 #define MAXLINE 1000 /* max input line length */
 
@@ -10,15 +10,13 @@ void print_longest_line() {
   char longest[MAXLINE];
 
   while ((len = _getline(line, MAXLINE)) > 0) {
-    if (len > MAXLINE)
-      len = MAXLINE;
+    if (len > MAXLINE) len = MAXLINE;
     if (len > maxlen) {
       maxlen = len;
       copy(longest, line);
     }
   }
-  if (maxlen > 0)
-    printf("longest line: %s\n", longest);
+  if (maxlen > 0) printf("longest line: %s\n", longest);
 }
 
 /* print every line longer than 80 chars */
@@ -27,8 +25,7 @@ void print_longer_than_eighty_chars() {
   char line[MAXLINE];
 
   while ((len = _getline(line, MAXLINE)) > 0) {
-    if (len > MAXLINE)
-      len = MAXLINE;
+    if (len > MAXLINE) len = MAXLINE;
     if (len > 80) {
       printf("%s\n", line);
     }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "utils.c"
+#include "../utils.c"
 
 int main() {
   int c, nwhite, nother;
